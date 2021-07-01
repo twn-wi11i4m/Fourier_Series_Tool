@@ -34,7 +34,7 @@ ans =
 3. Open ```initializer.m``` and run it
 For first time you run, you will see a message <br>
 ![image](https://user-images.githubusercontent.com/67225779/124116060-1a412980-daa1-11eb-873a-689b16ba0ff5.png) <br>
-Click **Change Folder** and the MATLAB working directory will be redirected to ```Fourier_Series_tool``` folder. <br>
+Click **Change Folder** and the MATLAB working directory will be redirected to ```Fourier_Series_tool-main``` folder. <br>
 
 4. Check the working directory is it correct.
 ``` matlab
@@ -42,7 +42,7 @@ Click **Change Folder** and the MATLAB working directory will be redirected to `
 
 ans =
 
-    '/Users/YourName/Document/Folder/MATLAB/Fourier_Series_tool'
+    '/Users/YourName/Document/Folder/MATLAB/Fourier_Series_tool-main'
 
 >>
 ```
