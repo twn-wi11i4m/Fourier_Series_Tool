@@ -1,2 +1,5 @@
-# Fourier-Series-MATLAB-Tool
-Some MATLAB programme for Fourier series
+# Fourier Series MATLAB Tool
+This project is supervioused by Dr. Tak Kwong WONG and use it as teaching material. 
+
+
+
