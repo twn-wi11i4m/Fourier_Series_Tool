@@ -60,8 +60,64 @@ For any question, please refert to MATLAB Help Center. [Link](https://www.mathwo
 
 ## Example 1
 
+The show the Fourier sine series ![ex1](http://www.sciweavers.org/upload/Tex2Img_1625145951/eqn.png) on interval ![ex1interval](http://www.sciweavers.org/upload/Tex2Img_1625141408/eqn.png) from n = 1 to n = 50.
 
+1. Open ```initializer.m``` and change the parameter as following
+```matlab
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Define f(x)
+syms f(x)
+f(x) = sin(2*x) + x^2;
+
+% Interval and number of series
+interval_start = 0;
+interval_end = 2*pi;
+n = 50;
+
+% Series type choose from ['Sine','Cosine','Sine_and_Cosine']
+series_type = 'Sine';
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+```
+> When typing the equation, you should avoid to use ```/``` for division. <br>
+> For the detail of creating symbolic functions on MATLAB, please refer to https://www.mathworks.com/help/symbolic/syms.html#buoeaym-1
+
+2. Run ```initializer.m``` and there will be a folder ```Fourier_Series_sin(2*x) + x^2_(n=50)_[0, 6.2832]_Sine``` and a ```info.txt``` file. The variables will be stored in MATLAB.
+```
+>> initializer
+Initialization finished.
+```
+3. Run ```Fourier_Series_Coefficients.m``` and it will take some time to compute each of the coefficients of Fourier series, i.e. ![A_n](http://www.sciweavers.org/upload/Tex2Img_1625143324/eqn.png) or ![B_n](http://www.sciweavers.org/upload/Tex2Img_1625143359/eqn.png)
+```
+>> Fourier_Series_Coefficients
+The Fourier Series Coefficients have been calculated.
+Exported! csv file name: Fourier_Coefficients_sin(2*x) + x^2_(n=50)_[0, 6.2832]_Sine.csv
+Exported! png file name: Fourier_Coefficients_sin(2*x) + x^2_(n=50)_[0, 6.2832]_Sine.png
+Elapsed time is 21.296792 seconds.
+```
+It will export ```.csv```  and ```.png``` files of the coefficients.
+4. Run ```Fourier_Series_Result.m```. It will based on the pervious coefficients.
+``` 
+>> Fourier_Series_Result
+Fourier Series result from 0 to 50 have been generated.
+```
+In MATLAB, there is the partition on the interval for plotting the graph, i.e., ![partition](http://www.sciweavers.org/upload/Tex2Img_1625146561/eqn.png). <br>
+The variable ```result_ind_terms``` contain the value of different terms. <br>
+<br>
+The ```result_ind_terms``` matrix<br>
+![RIT](http://www.sciweavers.org/upload/Tex2Img_1625147956/eqn.png) ![RIT2](http://www.sciweavers.org/upload/Tex2Img_1625147997/eqn.png) <br>
+<br>
+The ```result_sum_terms``` matrix<br>
+![RST](http://www.sciweavers.org/upload/Tex2Img_1625148429/eqn.png) <br>
+The row refer to the Fourier series value on each partition point ![pt](http://www.sciweavers.org/upload/Tex2Img_1625148586/eqn.png). <br>
+
+5. Run ```Fourier_Series_Plot_and_Animation.m```. It plot all series and create the gif. This takes some time.
+```
+>> Fourier_Series_Plot_and_Animation
+Animation done!
+```
+6. After then, there will be ```Fourier_Series_sin(2*x) + x^2_(n=50)_[0, 6.2832]_Sine.gif``` in the folder and ```/snapshot_og_gif/``` folder contain all snapshot of gif.
 
 ## Authors
 @twn-wi11i4m
