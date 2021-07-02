@@ -58,7 +58,7 @@ For any question, please refert to MATLAB Help Center. [Link](https://www.mathwo
 4. run ```Fourier_Series_Result.m```
 5. run ```Fourier_Series_Plot_and_Animation.m``` and then it will return a animation ```.gif``` file and the snapshot in ```/snapshot_of_gif``` folder.
 
-## Example 1
+## Example 1 (Plot a gif)
 
 The show the Fourier sine series ![ex1](http://www.sciweavers.org/upload/Tex2Img_1625145951/eqn.png) on interval ![ex1interval](http://www.sciweavers.org/upload/Tex2Img_1625141408/eqn.png) from n = 1 to n = 50.
 
@@ -120,6 +120,10 @@ The row refer to the Fourier series value on each partition point ![pt](http://w
 Animation done!
 ```
 6. After then, there will be ```Fourier_Series_function 1_(n=50)_[0, 6.2832]_Sine.gif``` in the folder and ```/snapshot_og_gif/``` folder contain all snapshot of gif.
+
+## Example 2 (Import existing Fourier series coefficients)
+1.
+
 
 ## Authors
 @twn-wi11i4m
