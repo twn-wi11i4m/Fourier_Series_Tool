@@ -62,7 +62,7 @@ For any question, please refert to MATLAB Help Center. [Link](https://www.mathwo
 
 The show the Fourier sine series ![ex1](http://www.sciweavers.org/upload/Tex2Img_1625145951/eqn.png) on interval ![ex1interval](http://www.sciweavers.org/upload/Tex2Img_1625141408/eqn.png) from n = 1 to n = 50.
 
-1. Open ```initializer.m``` and change the parameter as following
+1. Open ```initializer.m``` and change the parameter as following, inculding ```f(x)```, ```interval_start```, ```interval_end```, ```n```, ```series_type```, and ```function_name```. 
 ```matlab
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -78,12 +78,14 @@ n = 50;
 % Series type choose from ['Sine','Cosine','Sine_and_Cosine']
 series_type = 'Sine';
 
+% Function name
+function_name = 'function 1';
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ```
-> When typing the equation, you should avoid to use ```/``` for division. <br>
 > For the detail of creating symbolic functions on MATLAB, please refer to https://www.mathworks.com/help/symbolic/syms.html#buoeaym-1
 
-2. Run ```initializer.m``` and there will be a folder ```Fourier_Series_sin(2*x) + x^2_(n=50)_[0, 6.2832]_Sine``` and a ```info.txt``` file. The variables will be stored in MATLAB.
+2. Run ```initializer.m``` and there will be a folder ```Fourier_Series_function 1_(n=50)_[0, 6.2832]_Sine``` and a ```info.txt``` file. The variables will be stored in MATLAB.
 ```
 >> initializer
 Initialization finished.
@@ -92,9 +94,9 @@ Initialization finished.
 ```
 >> Fourier_Series_Coefficients
 The Fourier Series Coefficients have been calculated.
-Exported! csv file name: Fourier_Coefficients_sin(2*x) + x^2_(n=50)_[0, 6.2832]_Sine.csv
-Exported! png file name: Fourier_Coefficients_sin(2*x) + x^2_(n=50)_[0, 6.2832]_Sine.png
-Elapsed time is 21.296792 seconds.
+Exported! csv file name: Fourier_Coefficients_function 1_(n=50)_[0, 6.2832]_Sine.csv
+Exported! png file name: Fourier_Coefficients_function 1_(n=50)_[0, 6.2832]_Sine.png
+Elapsed time is 4.637936 seconds.
 ```
 It will export ```.csv```  and ```.png``` files of the coefficients.
 4. Run ```Fourier_Series_Result.m```. It will based on the pervious coefficients.
@@ -117,7 +119,7 @@ The row refer to the Fourier series value on each partition point ![pt](http://w
 >> Fourier_Series_Plot_and_Animation
 Animation done!
 ```
-6. After then, there will be ```Fourier_Series_sin(2*x) + x^2_(n=50)_[0, 6.2832]_Sine.gif``` in the folder and ```/snapshot_og_gif/``` folder contain all snapshot of gif.
+6. After then, there will be ```Fourier_Series_function 1_(n=50)_[0, 6.2832]_Sine.gif``` in the folder and ```/snapshot_og_gif/``` folder contain all snapshot of gif.
 
 ## Authors
 @twn-wi11i4m
