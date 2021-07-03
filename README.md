@@ -122,6 +122,7 @@ Animation done!
 6. After then, there will be ```Fourier_Series_function 1_(n=50)_[0, 6.2832]_Sine.gif``` in the folder and ```/snapshot_og_gif/``` folder contain all snapshot of gif.
 
 ## Example 2 (Import existing Fourier series coefficients)
+
 1.
 
 
