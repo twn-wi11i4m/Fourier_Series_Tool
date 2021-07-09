@@ -58,7 +58,7 @@ For any question, please refert to MATLAB Help Center. [Link](https://www.mathwo
 4. run ```Fourier_Series_Result.m```
 5. run ```Fourier_Series_Plot_and_Animation.m``` and then it will return a animation ```.gif``` file and the snapshot in ```/snapshot_of_gif``` folder.
 
-## Example 1 (Plot a gif)
+## Example 1 (Plot a gif of Fourier Series)
 
 The show the Fourier sine series ![ex1](http://www.sciweavers.org/upload/Tex2Img_1625145951/eqn.png) on interval ![ex1interval](http://www.sciweavers.org/upload/Tex2Img_1625141408/eqn.png) from n = 1 to n = 50.
 
@@ -104,7 +104,7 @@ It will export ```.csv```  and ```.png``` files of the coefficients.
 >> Fourier_Series_Result
 Fourier Series result from 0 to 50 have been generated.
 ```
-In MATLAB, there is the partition on the interval for plotting the graph, i.e., ![partition](http://www.sciweavers.org/upload/Tex2Img_1625146561/eqn.png). <br>
+In MATLAB, there is the random partition on the interval for plotting the graph, i.e., ![partition](http://www.sciweavers.org/upload/Tex2Img_1625146561/eqn.png). <br>
 The variable ```result_ind_terms``` contain the value of different terms. <br>
 <br>
 The ```result_ind_terms``` matrix<br>
@@ -121,9 +121,51 @@ Animation done!
 ```
 6. After then, there will be ```Fourier_Series_function 1_(n=50)_[0, 6.2832]_Sine.gif``` in the folder and ```/snapshot_og_gif/``` folder contain all snapshot of gif.
 
-## Example 2 (Import existing Fourier series coefficients)
+## Example 2 (Import existing Fourier series coefficients from external sources)
 
-1.
+Given you would import a Fourier Coefficients  ```.csv``` file for some function ![f](http://www.sciweavers.org/upload/Tex2Img_1625835255/render.png). For example, a coefficient of Fourier Sine series,
+| n | B_n |
+| --- | ----------- |
+| 0 | 0 |
+| 1 | 4 |
+| 2 | 2 |
+| 3 | 1.33333333333 |
+| 4 | 1 |
+| 5 | 0.8 |
+| ... | ... |
+
+1. First, you need to initialize the parameter in ```initializer.m``` and then run it. There will be a folder created.
+2. To import the ```.csv``` file, you need to place the file into the folder.
+3. Edit the parameter in ```Import_the_Fourier_Coefficients_csv.m```
+```matlab
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Make sure the file name and the folder path is correct
+folder_name_import = 'Fourier_Series_Triangle_and_Semicircle_(n=400)_[0, 6.2832]_Sine';
+file_name_import = 'Fourier_Coefficients_Triangle_and_Semicircle_(n=400)_[0, 6.2832]_Sine.csv';
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+```
+4. Run it
+```matlab
+>> Import_the_Fourier_Coefficients_csv
+Imported!
+Exported! png file name: Fourier_Coefficients_Triangle_and_Semicircle_(n=400)_[0, 6.2832]_Sine.png
+>> 
+```
+5. Run ```Fourier_Series_Result.m``` and ```Fourier_Series_Plot_and_Animation.m``` as usual.
+
+## Example 3 (Plot different n terms in one plot)
+1. Run ```initializer.m```,```Fourier_Series_Coefficients.m```,```Fourier_Series_Result.m```,and ```Fourier_Series_Plot_and_Animation.m``` as usual.
+2. open ```Different_Fourier_Series_plot``` and edit the following parameter
+```matlab
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% list of n to plot
+list_of_n_to_plot = [1,2,4,10,50,200];
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+```
+> Change axis_boundary in case you need.
+3. Run and different ```.png``` plot will be in the folder.
+
+
 
 
 ## Authors
