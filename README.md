@@ -15,7 +15,7 @@ The Fourier series is named in honor of Jean-Baptiste Joseph Fourier (1768–183
 ![Fourier_Cosine_Series_formula](https://user-images.githubusercontent.com/67225779/126028356-7b2987b9-aff4-48e8-afae-f7c00b58e279.png)
 
 
-### Fourier (Sine and Cosine) Series on [interval_neg_L_to_L](https://user-images.githubusercontent.com/67225779/126026705-5ffec3c9-b546-4406-baf6-346fe1a2cacb.png)
+### Fourier (Sine and Cosine) Series on ![interval_neg_L_to_L](https://user-images.githubusercontent.com/67225779/126026705-5ffec3c9-b546-4406-baf6-346fe1a2cacb.png)
 
 ![Fourier_Full_Series_formula_part_1](https://user-images.githubusercontent.com/67225779/126028997-1d96d08e-3b95-49af-9695-9c1620239f8b.png)
 ![Fourier_Full_Series_formula_part_2](https://user-images.githubusercontent.com/67225779/126028998-a346e0b7-91bb-424b-adec-1ae8d8760a56.png)
