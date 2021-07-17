@@ -2,17 +2,23 @@
 This project is supervised by Dr. Tak Kwong WONG and use as teaching material. This project aims to build a useful MATLAB tool for studying the Fourier series of any function and some special phenomenon.
 
 ## What is Fourier Series...
-The Fourier series is named in honor of Jean-Baptiste Joseph Fourier (1768–1830), and the series approximate an arbitrary function ![equation](http://www.sciweavers.org/upload/Tex2Img_1625132683/eqn.png) in an interval ![equation](http://www.sciweavers.org/upload/Tex2Img_1625132830/eqn.png) or ![equation](http://www.sciweavers.org/upload/Tex2Img_1625132916/eqn.png). <br>
+The Fourier series is named in honor of Jean-Baptiste Joseph Fourier (1768–1830), and the series approximate an arbitrary function ![f_x](https://user-images.githubusercontent.com/67225779/126026535-e12a9b04-c7b2-4be3-96fb-941e28c20af1.png) in an interval ![interval_0_to_L](https://user-images.githubusercontent.com/67225779/126026696-06cef807-3695-4852-94b8-121b7c740419.png) or ![interval_neg_L_to_L](https://user-images.githubusercontent.com/67225779/126026705-5ffec3c9-b546-4406-baf6-346fe1a2cacb.png). <br>
 [Wikipedia](https://en.wikipedia.org/wiki/Fourier_series)
 
-## Different Types of Fourier Series
-### Fourier Sine Series on ![equation](http://www.sciweavers.org/upload/Tex2Img_1625132830/eqn.png)
-![SineSeries](http://www.sciweavers.org/upload/Tex2Img_1625135508/eqn.png)
-### Fourier Cosine Series on ![equation](http://www.sciweavers.org/upload/Tex2Img_1625132830/eqn.png)
-![CosineSeries](http://www.sciweavers.org/upload/Tex2Img_1625135678/eqn.png)
-### Fourier (Sine and Cosine) Series on ![equation](http://www.sciweavers.org/upload/Tex2Img_1625132916/eqn.png)
-![SineCosineSeries](http://www.sciweavers.org/upload/Tex2Img_1625136045/eqn.png)
 
+
+
+## Different Types of Fourier Series
+### Fourier Sine Series on ![interval_0_to_L](https://user-images.githubusercontent.com/67225779/126026696-06cef807-3695-4852-94b8-121b7c740419.png)
+![Fourier_Sine_Series_formula](https://user-images.githubusercontent.com/67225779/126027424-88692555-8119-4001-a370-cb250ac07b32.png)
+### Fourier Cosine Series on ![interval_0_to_L](https://user-images.githubusercontent.com/67225779/126026696-06cef807-3695-4852-94b8-121b7c740419.png)
+![Fourier_Cosine_Series_formula](https://user-images.githubusercontent.com/67225779/126028356-7b2987b9-aff4-48e8-afae-f7c00b58e279.png)
+
+
+### Fourier (Sine and Cosine) Series on [interval_neg_L_to_L](https://user-images.githubusercontent.com/67225779/126026705-5ffec3c9-b546-4406-baf6-346fe1a2cacb.png)
+
+![Fourier_Full_Series_formula_part_1](https://user-images.githubusercontent.com/67225779/126028997-1d96d08e-3b95-49af-9695-9c1620239f8b.png)
+![Fourier_Full_Series_formula_part_2](https://user-images.githubusercontent.com/67225779/126028998-a346e0b7-91bb-424b-adec-1ae8d8760a56.png)
 
 ## Getting Started
 ### Dependencies
@@ -60,7 +66,8 @@ For any question, please refert to MATLAB Help Center. [Link](https://www.mathwo
 
 ## Example 1 (Plot a gif of Fourier Series)
 
-The show the Fourier sine series ![ex1](http://www.sciweavers.org/upload/Tex2Img_1625145951/eqn.png) on interval ![ex1interval](http://www.sciweavers.org/upload/Tex2Img_1625141408/eqn.png) from n = 1 to n = 50.
+The show the Fourier sine series !
+![ex1_f_x](https://user-images.githubusercontent.com/67225779/126029135-b2003622-6605-4e87-928e-115e64af9613.png) on interval ![interval_0_to_2pi](https://user-images.githubusercontent.com/67225779/126029161-9a5191f0-d052-4ba1-ad07-5b496e5864da.png) from n = 1 to n = 50.
 
 1. Open ```initializer.m``` and change the parameter as following, inculding ```f(x)```, ```interval_start```, ```interval_end```, ```n```, ```series_type```, and ```function_name```. 
 ```matlab
@@ -90,7 +97,9 @@ function_name = 'function 1';
 >> initializer
 Initialization finished.
 ```
-3. Run ```Fourier_Series_Coefficients.m``` and it will take some time to compute each of the coefficients of Fourier series, i.e. ![A_n](http://www.sciweavers.org/upload/Tex2Img_1625143324/eqn.png) or ![B_n](http://www.sciweavers.org/upload/Tex2Img_1625143359/eqn.png)
+3. Run ```Fourier_Series_Coefficients.m``` and it will take some time to compute each of the coefficients of Fourier series, i.e. ![A_n](https://user-images.githubusercontent.com/67225779/126029248-b453c5e8-9598-46d5-bee1-6392f735e495.png)  or ![B_n](https://user-images.githubusercontent.com/67225779/126029251-0c1bab87-3f70-4390-bedd-0bc86f42a2bb.png)
+ 
+
 ```
 >> Fourier_Series_Coefficients
 The Fourier Series Coefficients have been calculated.
@@ -104,15 +113,15 @@ It will export ```.csv```  and ```.png``` files of the coefficients.
 >> Fourier_Series_Result
 Fourier Series result from 0 to 50 have been generated.
 ```
-In MATLAB, there is the random partition on the interval for plotting the graph, i.e., ![partition](http://www.sciweavers.org/upload/Tex2Img_1625146561/eqn.png). <br>
+In MATLAB, there is the random partition on the interval for plotting the graph, i.e., ![Random_Partition_from_0_1000](https://user-images.githubusercontent.com/67225779/126029705-01b2965a-2581-487f-bcda-c0304aeb6bd0.png). <br>
 The variable ```result_ind_terms``` contain the value of different terms. <br>
 <br>
 The ```result_ind_terms``` matrix<br>
-![RIT](http://www.sciweavers.org/upload/Tex2Img_1625147956/eqn.png) ![RIT2](http://www.sciweavers.org/upload/Tex2Img_1625147997/eqn.png) <br>
+![result_ind_terms_matrix_part_1](https://user-images.githubusercontent.com/67225779/126030097-31f8f441-bb42-43e3-bde0-f01a527f67e4.png) ![result_ind_terms_matrix_part_2](https://user-images.githubusercontent.com/67225779/126030098-fb2332fe-9367-4c03-be5d-3d5569a32791.png) <br>
 <br>
 The ```result_sum_terms``` matrix<br>
-![RST](http://www.sciweavers.org/upload/Tex2Img_1625148429/eqn.png) <br>
-The row refer to the Fourier series value on each partition point ![pt](http://www.sciweavers.org/upload/Tex2Img_1625148586/eqn.png). <br>
+![result_sum_terms_matrix](https://user-images.githubusercontent.com/67225779/126030392-1a5d7c69-84d5-4318-bd7a-a442159d8727.png)<br>
+The row refer to the Fourier series value on each partition point ![Random_Partition_from_0_1000](https://user-images.githubusercontent.com/67225779/126030412-2bf442c4-b631-40da-aa19-7e4f7aeb40d6.png). <br>
 
 5. Run ```Fourier_Series_Plot_and_Animation.m```. It plot all series and create the gif. This takes some time.
 ```
@@ -123,7 +132,7 @@ Animation done!
 
 ## Example 2 (Import existing Fourier series coefficients from external sources)
 
-Given you would import a Fourier Coefficients  ```.csv``` file for some function ![f](http://www.sciweavers.org/upload/Tex2Img_1625835255/render.png). For example, a coefficient of Fourier Sine series,
+Given you would import a Fourier Coefficients  ```.csv``` file for some function ![f_x](https://user-images.githubusercontent.com/67225779/126030572-58fa6f70-aed6-4f9a-862d-879ad33d77c4.png). For example, a coefficient of Fourier Sine series,
 | n | B_n |
 | --- | ----------- |
 | 0 | 0 |
@@ -174,6 +183,8 @@ list_of_n_to_plot = [1,2,4,10,50,200];
 ## Version History
 * Ver 1.0
   - Initial Release
+* Ver 2.0
+  - Improve the algorithm to compute the Fourier coefficients.
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
