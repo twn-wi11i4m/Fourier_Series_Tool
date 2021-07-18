@@ -66,16 +66,15 @@ For any question, please refert to MATLAB Help Center. [Link](https://www.mathwo
 
 ## Example 1 (Plot a gif of Fourier Series)
 
-The show the Fourier sine series !
-![ex1_f_x](https://user-images.githubusercontent.com/67225779/126029135-b2003622-6605-4e87-928e-115e64af9613.png) on interval ![interval_0_to_2pi](https://user-images.githubusercontent.com/67225779/126029161-9a5191f0-d052-4ba1-ad07-5b496e5864da.png) from n = 1 to n = 50.
+The show the Fourier sine series ![ex1_f_x](https://user-images.githubusercontent.com/67225779/126029135-b2003622-6605-4e87-928e-115e64af9613.png) on interval ![interval_0_to_2pi](https://user-images.githubusercontent.com/67225779/126029161-9a5191f0-d052-4ba1-ad07-5b496e5864da.png) from n = 1 to n = 50.
 
 1. Open ```initializer.m``` and change the parameter as following, inculding ```f(x)```, ```interval_start```, ```interval_end```, ```n```, ```series_type```, and ```function_name```. 
 ```matlab
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Define f(x)
-syms f(x)
-f(x) = sin(2*x) + x^2;
+syms x
+f = sin(2*x) + x^2;
 
 % Interval and number of series
 interval_start = 0;
@@ -128,6 +127,9 @@ The row refer to the Fourier series value on each partition point ![Random_Parti
 >> Fourier_Series_Plot_and_Animation
 Animation done!
 ```
+> To view the plotting process, you can change ```h = figure('visible', 'off')``` to be ```h = figure('visible', 'on')```.
+
+
 6. After then, there will be ```Fourier_Series_function 1_(n=50)_[0, 6.2832]_Sine.gif``` in the folder and ```/snapshot_og_gif/``` folder contain all snapshot of gif.
 
 ## Example 2 (Import existing Fourier series coefficients from external sources)
@@ -144,7 +146,7 @@ Given you would import a Fourier Coefficients  ```.csv``` file for some function
 | ... | ... |
 
 1. First, you need to initialize the parameter in ```initializer.m``` and then run it. There will be a folder created.
-2. To import the ```.csv``` file, you need to place the file into the folder.
+2. To import the ```.csv``` file, you need to place the file under the folder.
 3. Edit the parameter in ```Import_the_Fourier_Coefficients_csv.m```
 ```matlab
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -172,7 +174,59 @@ list_of_n_to_plot = [1,2,4,10,50,200];
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 ```
 > Change axis_boundary in case you need.
-3. Run and different ```.png``` plot will be in the folder.
+3. Run it and then different ```.png``` plot will be in the folder.
+
+## Example 4 (Zoom in to show Gibbs Phenomenon)
+``` Gibbs_Phenomenon_zoom_in_Animation.m``` is a independent programme to show Gibbs phenomenon ([Wikipedia](https://en.wikipedia.org/wiki/Gibbs_phenomenon)) in ![unit_step_function_in_Gibbs_Phenomenon](https://user-images.githubusercontent.com/67225779/126031881-3dc12325-0e59-485f-a5ca-ae5c517169f6.png) . It will show the near 9 percent of the jump at the a jump discontinuity.
+
+Example:<br>
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/67225779/126031916-3561bfa4-ec34-4f52-b812-fe18785a1b01.gif" alt="Gibbs_Phenomenon_zoom_in_Animation" >
+</p>
+
+## Example 5 (Animaation of wave equation solution)
+The homogeneous Dirichlet conditions for the wave equation with some initial conditions:<br>
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/67225779/126032908-091d38da-057c-48ae-8ded-d4407e559968.png" alt="Homogeneous_Dirichlet_conditions_wave_equation_inital_condition" >
+</p>
+
+By method of separation of variables, the solutio will be
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/67225779/126033114-b8618739-48c0-48ba-8ddb-52f7f45eda55.png" alt="Solution_Homogeneous_Dirichlet_conditions_wave_equation_inital_condition" >
+</p>
+
+where the coefficients ![A_n](https://user-images.githubusercontent.com/67225779/126033209-1802eae5-37c5-4dc8-998c-11ad4967bd0f.png) is the Fourier coefficients of Fourier sine series of ![phi_x](https://user-images.githubusercontent.com/67225779/126033358-1b3aae86-8eef-4a0a-a360-144a04b9d87c.png) , that is ![phi_x_fourier_series](https://user-images.githubusercontent.com/67225779/126033435-0c810e8e-d9eb-4f3e-8551-39cb914be686.png), and the coefficients ![B_n](https://user-images.githubusercontent.com/67225779/126033216-32361de6-0861-443a-8fcb-6c3dca8572fb.png) is ![psi_x_fourier_series](https://user-images.githubusercontent.com/67225779/126033574-243f956f-df75-44d3-8189-3ea39aa00afc.png) .
+
+1. open ```Homogeneous_Dirichlet_Conditions_for_Wave_Equation_with_IC``` and edit the following parameter
+```matlab
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Define the parameter
+syms x;
+c = 10;
+L = 2*pi;
+phi = 0.5*x^2;
+psi = x;
+n = 500;
+t_end = 10;
+
+function_name = 'testing_result_v7';
+
+% axis tight manual
+axis_boundary = [0,L,-10,30];
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+
+> Reference: W.A. Strauss: Partial Differential Equations: An Introduction, Hoboken, N.J. : Wiley c2008 2nd ed. Chapter 4
+
+
+
 
 
 
