@@ -215,18 +215,10 @@ function_name = 'testing_result_v7';
 axis_boundary = [0,L,-10,30];
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-
+```
+2. run it and then the result will be saved under the folder.
 
 > Reference: W.A. Strauss: Partial Differential Equations: An Introduction, Hoboken, N.J. : Wiley c2008 2nd ed. Chapter 4
-
-
-
 
 
 
@@ -239,6 +231,7 @@ axis_boundary = [0,L,-10,30];
   - Initial Release
 * Ver 2.0
   - Improve the algorithm to compute the Fourier coefficients.
+  - Adding the wave equation simulator
 
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details
